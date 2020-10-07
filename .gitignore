@@ -1,0 +1,16 @@
+# Visual Studio and Visual Studio Code project related information
+.vs/
+.vscode/
+
+# Build results
+bin/
+obj/
+
+# .NET Core logging files
+debug.log
+
+# ReSharper user settings
+*.DotSettings*
+
+# Wiki files
+[Ww]iki/
