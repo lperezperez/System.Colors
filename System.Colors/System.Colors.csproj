@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <Authors>Luis Pérez</Authors>
+    <Copyright>2020 © Luis Pérez</Copyright>
+    <Description>This library provides a set of classes and methods which helps to work with multiple color spaces through .NET Standard.</Description>
+    <DefaultDocumentationHome>Home</DefaultDocumentationHome>
+    <DefaultDocumentationFolder>../Wiki</DefaultDocumentationFolder>
+    <DocumentationFile>../Wiki/System.Colors.xml</DocumentationFile>
+    <FileVersion>1.0.0.2</FileVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <LangVersion>latest</LangVersion>
+    <NeutralLanguage>en</NeutralLanguage>
+    <PackageIcon>Icon.png</PackageIcon>
+    <PackageId>System.Colors</PackageId>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/lperezperez/System.Colors</PackageProjectUrl>
+    <PackageTags>Base16;Builder;C#</PackageTags>
+    <RepositoryUrl>https://github.com/lperezperez/base16-builder-netcore</RepositoryUrl>
+    <RootNamespace>System.Colors</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="Icon.png" Pack="true" PackagePath=""/>
+    <None Include="../LICENSE.md" Pack="true" PackagePath="" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DefaultDocumentation" Version="0.6.12" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive"/>
+  </ItemGroup>
+</Project>

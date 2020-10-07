@@ -1,0 +1,42 @@
+﻿<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Drawing" #>
+<#@ assembly name="System.Xml" #>
+<#@ assembly name="System.Xml.Linq" #>
+<#@ import namespace="System.Linq" #>
+<#@ import Namespace="System.Xml.Linq" #>
+<#@ output extension=".cs" #>
+namespace System.Colors
+{
+    using System.Diagnostics.CodeAnalysis;
+    using System.Drawing;
+    using FluentAssertions;
+    using Xunit;
+    [ExcludeFromCodeCoverage]
+    public sealed class ConversionTests
+    {
+<#
+var xDocument = XDocument.Load(this.Host.ResolvePath("ConversionTests.xml"));
+foreach (var color in xDocument.Descendants("Color"))
+{
+    var colorName = color.Attribute("Name").Value;
+#>
+        [Fact]
+        public void <#= colorName #>Test()
+        {
+            IColorSpace colorSpace;
+<#
+    foreach (var colorSpace in color.Descendants())
+    {
+#>
+            colorSpace = new <#= colorSpace.Name #> {<#= string.Join(", ", from component in colorSpace.Attributes() select $"{component.Name} = {component.Value}") #>};
+            Color.<#= colorName #>.To<<#= colorSpace.Name #>>().Should().Be(colorSpace);
+<#
+    }
+#>
+        }
+<#
+}
+#>
+    }
+}
