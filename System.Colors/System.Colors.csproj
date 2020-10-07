@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <AssemblyVersion>0.0.1</AssemblyVersion>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
     <Authors>Luis Pérez</Authors>
     <Copyright>2020 © Luis Pérez</Copyright>
     <Description>This library provides a set of classes and methods which helps to work with multiple color spaces through .NET Standard.</Description>
     <DefaultDocumentationHome>Home</DefaultDocumentationHome>
     <DefaultDocumentationFolder>../Wiki</DefaultDocumentationFolder>
     <DocumentationFile>../Wiki/System.Colors.xml</DocumentationFile>
-    <FileVersion>0.0.1.1</FileVersion>
+    <FileVersion>1.0.0.2</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <LangVersion>latest</LangVersion>
     <NeutralLanguage>en</NeutralLanguage>
@@ -19,7 +19,7 @@
     <RepositoryUrl>https://github.com/lperezperez/base16-builder-netcore</RepositoryUrl>
     <RootNamespace>System.Colors</RootNamespace>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>0.0.1</Version>
+    <Version>1.0.0</Version>
   </PropertyGroup>
   <ItemGroup>
     <None Include="Icon.png" Pack="true" PackagePath=""/>
